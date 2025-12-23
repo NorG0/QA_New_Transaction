@@ -20,7 +20,7 @@ export default defineConfig({
     },
   ],
 
-  /* Run your local dev server before starting the tests */
+  /* Run your local server before starting the tests */
   webServer: {
     command: 'npx http-server . -p 8080',
     url: 'http://localhost:8080',

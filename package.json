@@ -1,0 +1,23 @@
+{
+  "name": "qa_new_transaction",
+  "version": "1.0.0",
+  "description": "Test Assigment",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NorG0/QA_New_Transaction.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/NorG0/QA_New_Transaction/issues"
+  },
+  "homepage": "https://github.com/NorG0/QA_New_Transaction#readme",
+  "devDependencies": {
+    "@faker-js/faker": "^10.1.0",
+    "@playwright/test": "^1.57.0"
+  }
+}

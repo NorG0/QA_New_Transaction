@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Redoc – Transaction Summary</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Transaction Summary</h1>
+    <div id="summaryContent"></div>
+    <div class="form-actions">
+      <a href="index.html">Create Another Transaction</a>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const container = document.getElementById('summaryContent');
+      const raw = sessionStorage.getItem('transactionData');
+
+      if (!raw) {
+        container.innerHTML = '<div class="error">No transaction data found. Please submit a new transaction first.</div>';
+        return;
+      }
+
+      let data;
+      try {
+        data = JSON.parse(raw);
+      } catch (e) {
+        container.innerHTML = '<div class="error">Error reading transaction data.</div>';
+        return;
+      }
+
+      container.innerHTML = `
+        <div class="summary-card">
+          <p><strong>Transaction ID:</strong> ${data.transactionId}</p>
+          <p><strong>Buyer Name:</strong> ${data.buyerName}</p>
+          <p><strong>Buyer Email:</strong> ${data.buyerEmail}</p>
+          <p><strong>Buyer Phone:</strong> ${data.buyerPhone}</p>
+          <p><strong>Property Address:</strong> ${data.propertyAddress}</p>
+          <p><strong>Postal Code:</strong> ${data.postalCode}</p>
+          <p><strong>Sale Price (SGD):</strong> ${data.salePrice}</p>
+          <p><strong>Ownership Document Name:</strong> ${data.ownershipDocumentName}</p>
+        </div>
+      `;
+    })();
+  </script>
+</body>
+</html>

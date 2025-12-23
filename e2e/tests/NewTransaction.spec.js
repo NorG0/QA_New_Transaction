@@ -19,6 +19,7 @@ const errorMessages = {
     invalidPostalCode: 'Postal code must be 6 digits.',
     invalidSalePrice: 'Sale price must be a positive number.',
     invalidFileName: 'File size must not exceed 10MB.',
+    invalidFileFormat: 'File must be a PDF.',
   },
   formError: 'Please fix the errors above and resubmit.',
 };

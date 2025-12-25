@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Redoc – New Sale Transaction</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>New Sale Transaction</h1>
+    <form id="transactionForm" novalidate>
+      <div class="form-group">
+        <label for="buyerName">Buyer Name *</label>
+        <input type="text" id="buyerName" name="buyerName" />
+        <div class="error" id="buyerNameError"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="buyerEmail">Buyer Email *</label>
+        <input type="email" id="buyerEmail" name="buyerEmail" />
+        <div class="error" id="buyerEmailError"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="buyerPhone">Buyer Phone (SG) *</label>
+        <input type="text" id="buyerPhone" name="buyerPhone" placeholder="e.g. 91234567" />
+        <div class="error" id="buyerPhoneError"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="propertyAddress">Property Address *</label>
+        <textarea id="propertyAddress" name="propertyAddress" rows="2"></textarea>
+        <div class="error" id="propertyAddressError"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="postalCode">Postal Code (6 digits, SG) *</label>
+        <input type="text" id="postalCode" name="postalCode" />
+        <div class="error" id="postalCodeError"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="salePrice">Sale Price (SGD) *</label>
+        <input type="number" id="salePrice" name="salePrice" step="1000" min="0" />
+        <div class="error" id="salePriceError"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="ownershipDocument">Ownership Document (PDF, max 10MB) *</label>
+        <input type="file" id="ownershipDocument" name="ownershipDocument" />
+        <div class="error" id="ownershipDocumentError"></div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" id="submitButton">Submit Transaction</button>
+      </div>
+
+      <div class="form-message" id="formMessage"></div>
+    </form>
+  </div>
+
+  <script src="./src/main.js"></script>
+</body>
+</html>
